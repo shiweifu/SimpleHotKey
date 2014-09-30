@@ -1,11 +1,3 @@
-//
-//  SPHotKey.h
-//  ModalMenu
-//
-//  Created by Odin Dutton on 17/07/2014.
-//  Copyright (c) 2014 Odin Dutton. All rights reserved.
-//
-
 #import <Cocoa/Cocoa.h>
 #import <Carbon/Carbon.h>
 

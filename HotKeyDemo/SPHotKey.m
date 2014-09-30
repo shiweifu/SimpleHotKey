@@ -1,12 +1,3 @@
-//
-//  SPHotKey.m
-//  ModalMenu
-//
-//  Created by Odin Dutton on 17/07/2014.
-//  Copyright (c) 2014 Odin Dutton. All rights reserved.
-//
-//  http://dbachrach.com/blog/2005/11/program-global-hotkeys-in-cocoa-easily/
-
 #import "SPHotKey.h"
 
 @implementation SPHotKey
