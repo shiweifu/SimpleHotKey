@@ -29,3 +29,5 @@ OSStatus HotKeyHandler(EventHandlerCallRef nextHandler, EventRef theEvent, void 
 
 @end
 
+DDHotKey 的github 地址：https://github.com/davedelong/DDHotKey
+
