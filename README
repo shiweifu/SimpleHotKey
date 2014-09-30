@@ -1,0 +1,31 @@
+#本库只保留了DDHotKey 的基本功能：
+ - 绑定全局快捷键
+ - 取消绑定全局快捷键
+
+摘录一段注册全局快捷键的代码（使用了Carbon）：
+
+@implementation HotKey
+
+OSStatus HotKeyHandler(EventHandlerCallRef nextHandler, EventRef theEvent, void *userData) {
+    AppDelegate *delegate = [[NSApplication sharedApplication]delegate];
+    [delegate displayMenu];
+    return noErr;
+}
+
+- (void) register {
+    EventHotKeyRef gMyHotKeyRef;
+    EventHotKeyID gMyHotKeyID;
+    EventTypeSpec eventType;
+    eventType.eventClass = kEventClassKeyboard;
+    eventType.eventKind = kEventHotKeyPressed;
+
+    InstallApplicationEventHandler(&HotKeyHandler, 1, &eventType, NULL, NULL);
+
+    gMyHotKeyID.signature='htk1';
+    gMyHotKeyID.id=1;
+
+    RegisterEventHotKey(kVK_ANSI_M, cmdKey+shiftKey, gMyHotKeyID, GetApplicationEventTarget(), 0, &gMyHotKeyRef);
+}
+
+@end
+
